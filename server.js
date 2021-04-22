@@ -4,6 +4,8 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const cors = require('cors');
 
+const PORT = process.env.PORT || 9999;
+
 // коллекция всех комнат
 const rooms = new Map();
 
@@ -64,7 +66,7 @@ io.on('connection', socket => {
     });
 });
 
-server.listen(9999, (err) => {
+server.listen(PORT, (err) => {
     if (err) {
         throw Error(err);
     }

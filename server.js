@@ -15,8 +15,6 @@ app.use(cors());
 app.use(express.json());
 app.options('*', cors());
 
-app.use(favicon(__dirname + '/build/favicon.png'));
-
 //здесь наше приложение отдаёт статику
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));

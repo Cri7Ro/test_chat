@@ -16,7 +16,7 @@ const SignIn = ({onLogin})  => {
       return alert ('Input all fields!');
     };
     // отправляем запрос на сервер с текущим roomId (если такой комнаты нет, то создвется новая)
-    fetch("http://localhost:9999/rooms", {
+    fetch("http://my-test-chat-task.herokuapp/rooms", {
         method: "post",
         headers: {
           "Content-type": "application/json"

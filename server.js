@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+const path = require('path');
 const cors = require('cors');
+
 
 const PORT = process.env.PORT || 9999;
 
@@ -13,8 +15,8 @@ app.use(cors());
 app.use(express.json());
 app.options('*', cors());
 
-app.get('/rooms', (req, res) => {
-    res.status();
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 // обработка post запроса (если не найдена комната roomId, то создать её)

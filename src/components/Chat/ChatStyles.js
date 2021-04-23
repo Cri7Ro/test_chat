@@ -84,7 +84,6 @@ export const Messages = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    word-wrap: break-word;
     form {
         display: flex;
         flex-direction: column;
@@ -110,7 +109,8 @@ export const NewMessage = styled.div `
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    max-width: 50%;
+    max-width: 70%;
+    word-wrap: break-word;
     margin-bottom: 1rem;
 `;
 

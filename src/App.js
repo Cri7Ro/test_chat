@@ -29,7 +29,7 @@ function App() {
   };
 
   useEffect(() => {
-    //при нажатии кнопки Назад в браузере перенаправляем на корректный url
+    // при нажатии кнопки Назад в браузере перенаправляем на корректный url
     window.addEventListener('popstate', () => {
       window.location = window.location.href;
     });

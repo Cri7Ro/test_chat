@@ -52,7 +52,7 @@ const Chat = ({users, messages, userName, roomId}) => {
                     <a href={window.location.href} onClick={copyLink}>Invited Room</a>
                     <button onClick={handleLeaveClick}>Leave Room</button>
                 </RoomActions>
-                <i>Online ({users ? users.length : 0}): </i>
+                <i>Online ({users ? users.length : 0} 10000): </i>
                 <ul>
                     { users && users.map((e, i) => <li key={i.toString()}>{e}</li>) }
                 </ul>

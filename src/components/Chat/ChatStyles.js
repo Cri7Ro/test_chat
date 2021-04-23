@@ -8,6 +8,13 @@ export const ChatSection = styled.section `
     border-radius: 10px;
     height: 50vh;
     width: 50vw;
+
+    @media screen and (max-width: 1151px) {
+        width: 90vw;
+        height: 100vh;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
 `;
 
 export const RoomActions = styled.div `
@@ -49,6 +56,21 @@ export const UserList = styled.div `
         margin-top: .5rem;
         background-color: white;
         border-radius: 10px;
+    };
+
+    @media screen and (max-width: 1151px) {
+        max-width: 100%;
+        max-height: 10rem;
+        margin-right: 0;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li {
+            margin-right: .5rem;
+        }
     }
 `;
 
@@ -75,7 +97,12 @@ export const Messages = styled.div `
             font-weight: bold;
         }
     }
+    border: 1px solid red;
     padding: 1.5rem;
+
+    @media screen and (max-width: 1151px) {
+        flex-grow: 1;
+    }
 `;
 
 export const NewMessage = styled.div `
@@ -89,7 +116,7 @@ export const NewMessage = styled.div `
 export const MessageContent = styled.div `
     color: white;
     background-color: #630fd7;
-    padding: 1rem 1rem .5rem;
+    padding: .5rem;
     border-radius: 15px;
     span {
         font-size: .7rem;
@@ -112,4 +139,8 @@ export const WriteMessage = styled.textarea `
     border: 1px solid #d4cecd;
     font-size: 1rem;
     padding: .5rem;
+
+    @media screen and (max-width: 1151px) {
+        width: 70vw;
+    }
 `;

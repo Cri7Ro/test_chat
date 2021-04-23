@@ -4,6 +4,9 @@ import socket from './components/socket';
 import Chat from './components/Chat';
 
 function App() {
+
+
+
   // вошли/не вошли в комнату
   const [isLogin, setIsLogin] = useState(false);
   // id комнаты
@@ -26,12 +29,15 @@ function App() {
   };
 
   useEffect(() => {
+    //при нажатии кнопки Назад в браузере перенаправляем на корректный url
+    window.addEventListener('popstate', () => {
+      window.location = window.location.href;
+    });
     // получаем текущих онлайн пользователей и сообщения этой комнаты
     socket.on('room logined', ({users, messages}) => {
       setUsers(users);
       setMessages(messages);
     });
-
     // добавляем обработчик новых сообщений и добавляем их ко всем сообщениям комнаты
     socket.on('room newMessage', message => {
       setMessages(prev => [...prev, message])

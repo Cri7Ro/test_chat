@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import StyledForm from './SignInStyles';
 
 const SignIn = ({onLogin})  => {
   // имя вошедшего пользователя
@@ -11,7 +12,8 @@ const SignIn = ({onLogin})  => {
     window.location.href.split('/')[4] ? setRoomId (window.location.href.split('/')[4]) : setRoomId (Math.random().toFixed(32).toString().slice(2));
   }, []);
 
-  function handlSigninClick() {
+  function handlSigninClick(event) {
+    event.preventDefault();
     if (!userName) {
       return alert ('Input all fields!');
     };
@@ -31,10 +33,10 @@ const SignIn = ({onLogin})  => {
 
   // рендер формы входа
   return (
-    <div>
-      <input type="text" placeholder='name' value={userName} onChange={e => setUserName(e.target.value)}/>
-      <button onClick={handlSigninClick}>sign in</button>
-    </div> 
+    <StyledForm>
+      <input type="text" placeholder='Enter name' value={userName} onChange={e => setUserName(e.target.value)}/>
+      <button type='submit' onClick={handlSigninClick}>Sign In</button>
+    </StyledForm> 
   );
 }
       

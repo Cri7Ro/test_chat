@@ -20,7 +20,7 @@ export const ChatSection = styled.section `
 
 export const RoomActions = styled.div `
     display: flex;
-    align-item: center;
+    align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #696a6f;
     padding-bottom: .5rem;

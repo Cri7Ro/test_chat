@@ -110,8 +110,10 @@ export const NewMessage = styled.div `
     align-items: flex-start;
     flex-direction: column;
     max-width: 70%;
-    word-wrap: break-word;
+    word-break:break-all;
+    white-space: pre-wrap;
     margin-bottom: 1rem;
+    line-height: 1.5rem;
 `;
 
 export const MessageContent = styled.div `

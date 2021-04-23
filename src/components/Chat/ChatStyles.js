@@ -84,6 +84,7 @@ export const Messages = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    word-wrap: break-word;
     form {
         display: flex;
         flex-direction: column;

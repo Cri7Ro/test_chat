@@ -14,6 +14,7 @@ export const ChatSection = styled.section `
         height: 100vh;
         justify-content: flex-end;
         flex-direction: column;
+        margin: 0 auto 0;
     }
 `;
 
@@ -97,7 +98,6 @@ export const Messages = styled.div `
             font-weight: bold;
         }
     }
-    border: 1px solid red;
     padding: 1.5rem;
 
     @media screen and (max-width: 1151px) {

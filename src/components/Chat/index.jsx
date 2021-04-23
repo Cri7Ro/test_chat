@@ -54,7 +54,7 @@ const Chat = ({users, messages, userName, roomId}) => {
                 </RoomActions>
                 <i>Online ({users ? users.length : 0}): </i>
                 <ul>
-                    { users && users.map((e, i) => <li key={i.toString()}>{e}</li>) }
+                    {users && users.map((e, i) => <li key={i.toString()}>{e}</li>)}
                 </ul>
             </UserList>
             <Messages>
